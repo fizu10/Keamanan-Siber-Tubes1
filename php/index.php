@@ -61,10 +61,10 @@
                         if ($students) {
                             foreach ($students as $student) {
                                 echo "<tr>
-                                    <td>" . $student['id'] . "</td>
-                                    <td>" . $student['name'] . "</td>
-                                    <td>" . $student['age'] . "</td>
-                                    <td>" . $student['grade'] . "</td>
+                                    <td>" . htmlspecialchars($student['id']) . "</td>
+                                    <td>" . htmlspecialchars($student['name']) . "</td>
+                                    <td>" . htmlspecialchars($student['age']) . "</td>
+                                    <td>" . htmlspecialchars($student['grade']) . "</td>
                                     <td>
                                         <a href='edit.php?id=" . $student['id'] . "' class='btn btn-update'>Edit</a>
                                         <a href='delete.php?id=" . $student['id'] . "' class='btn btn-delete' onclick='return confirm(\"Yakin ingin menghapus?\")'>Hapus</a>
